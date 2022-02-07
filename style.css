@@ -76,9 +76,6 @@ main {
 
 /* Product List */
 
-.smallProduct {
-}
-
 .articles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -132,11 +129,20 @@ main {
   background-color: rgba(124, 144, 184, 0);
 }
 
-.soldOutImg {
-  filter: grayscale(50%);
+.productImage p {
+  display: none;
 }
 
-.soldOutImg p {
+.soldOut .productImage {
+  position: relative;
+}
+
+.soldOut img {
+  opacity: 0.5;
+}
+
+.soldOut .productImage p {
+  display: initial;
   position: absolute;
   right: 0;
   bottom: 0;

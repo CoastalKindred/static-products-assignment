@@ -18,8 +18,9 @@
     </header>
     <main>
       <h2>Footware</h2>
+
       <div class="articles">
-        <article class="smallProduct">
+        <!-- <article class="smallProduct">
           <a href="product.html">
             <img src="images/1163.webp" alt="" />
             <div class="productInfo">
@@ -51,30 +52,32 @@
               </div>
             </div>
           </a>
-        </article>
+        </article> -->
 
-        <article class="smallProduct soldOut">
-          <a href="product.html">
-            <div class="soldOutImg">
-              <img src="images/1525.webp" alt="" />
-              <p>Sold Out</p>
-            </div>
-            <div class="productInfo">
-              <h3>Blue T20 Indian Cricket Jersey</h3>
-              <p class="subtle">Tshirts | Nike</p>
-              <div class="price">
-                <p class="originalPrice">DKK 1595,-</p>
-                <div class="discounted">
-                  <p>Now DKK 1560,-</p>
-                  <p>-34%</p>
+        <template>
+          <article class="smallProduct">
+            <a href="product.html">
+              <div class="productImage">
+                <img src="images/1525.webp" alt="" />
+                <p>Sold Out</p>
+              </div>
+              <div class="productInfo">
+                <h3>Blue T20 Indian Cricket Jersey</h3>
+                <p class="subtle">Tshirts | Nike</p>
+                <div class="price">
+                  <p class="originalPrice">DKK 1595,-</p>
+                  <div class="discounted">
+                    <p>Now DKK 1560,-</p>
+                    <p>-34%</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </article>
+            </a>
+          </article>
+        </template>
       </div>
     </main>
 
-    <script src="main.js"></script>
+    <script src="productList.js"></script>
   </body>
 </html>
