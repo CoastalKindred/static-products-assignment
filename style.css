@@ -53,20 +53,17 @@ main {
 
 /* Categories */
 
-.categories ul {
+.categories {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   gap: 1em;
 }
 
-.categories ul li {
+.categories a {
   border: 1px solid black;
   font-size: 2em;
   padding: 0 1rem 0.5rem 0;
-}
-
-.categories ul li a {
   width: 300px;
   height: 150px;
   display: flex;
@@ -91,6 +88,14 @@ main {
   padding: 0.5em 0;
 }
 
+article {
+  background-color: rgb(124, 144, 184);
+}
+
+.productInfo {
+  padding: 1rem;
+}
+
 .subtle {
   color: rgb(216, 215, 215);
   padding: 0 0 0.5em 0;
@@ -100,7 +105,7 @@ main {
   display: inline-block;
   text-align: right;
   padding: 0.5em 1em;
-  background-color: rgb(124, 144, 184);
+  background-color: rgb(152, 172, 211);
   border-radius: 10px;
 }
 
@@ -116,7 +121,7 @@ main {
 
 .onSale .discounted p {
   padding: 0.5em 1em;
-  background-color: rgb(124, 144, 184);
+  background-color: rgb(152, 172, 211);
   border-radius: 10px;
 }
 

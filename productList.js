@@ -1,4 +1,11 @@
-const url = "http://kea-alt-del.dk/t7/api/products/";
+const urlParams = new URLSearchParams(window.location.search);
+const productID = urlParams.get("category");
+
+const url = `http://kea-alt-del.dk/t7/api/products?category=${productID}`;
+
+// const productID = urlParams.get("subcategory");
+
+// const url = `http://kea-alt-del.dk/t7/api/products?subcategory=${productID}`;
 
 fetch(url)
     .then(function(res) {
@@ -10,6 +17,8 @@ fetch(url)
 
 function handleProductList(data){
     data.forEach(showProduct);
+    console.log(data);
+
 }
 
 function showProduct(product) {
@@ -39,7 +48,7 @@ function showProduct(product) {
         copy.querySelector("article").classList.add("onSale");
     }
 
-    document.querySelector("h2").textContent = product.subcategory;
+    document.querySelector("h2").textContent = product.category;
 
 
     //grab parent
