@@ -25,6 +25,12 @@ function showProduct(product) {
     copy.querySelector(".originalPrice").textContent = `DKK ${product.price}-,`;
     copy.querySelector(".discounted p").textContent = `DKK ${Math.floor(product.price - (product.price * (product.discount/100)))}-,`;
     copy.querySelector(".discounted p:last-child").textContent = `-${product.discount}%`;
+
+    // URLSearchParams 
+    // https://kea-alt-del.dk/t7/api/products/665
+    copy.querySelector(".smallProduct a").href = `product.html?id=${product.id}`;
+    
+
     // soldout onsale
     if(product.soldout){
         copy.querySelector("article").classList.add("soldOut");
@@ -44,5 +50,7 @@ function showProduct(product) {
     console.log(Math.floor(product.price - (product.price * (product.discount/100))));
     console.log("product is "+ product.soldout);
 
+    
 }
+
 
